@@ -1,0 +1,10 @@
+.footer{    
+    background-color: $color-grey-dark;
+
+    &__content{
+        text-align: center;
+        font-size: 1.6rem;
+        color: $color-grey-light;
+        padding: 1rem;
+    }
+}
