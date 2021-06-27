@@ -1,0 +1,35 @@
+.model{
+    grid-column: full-start / col-end 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+        height: 80vh;
+        width: 80%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 4rem;
+        transform: translateY(5rem);
+
+        &--pre{
+            background-image: url('../img/pre-makeup.jpg');
+        }
+    
+        &--pos{
+            background-image: url('../img/pos-makeup.jpg');
+            //transform: translateX(50vh);
+        }
+
+        @media only screen and (max-width: $mq-medium){
+            height: 60vh;
+            width: 85%;
+        }
+
+        @media only screen and (max-width: $mq-small){
+            height: 50vh;
+            width: 90%;
+        }
+    }
+
+}

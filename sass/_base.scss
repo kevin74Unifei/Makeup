@@ -1,27 +1,18 @@
-$color-black: #0B0C10;
-$color-white: #fff;
+$color-black: #001219;
+$color-white: #eae2b7;
 
-$color-grey-dark: #1F2833;
-$color-grey-light: #C5C6C7;
+$color-primary: #f77f00;
+$color-primary-light: #fcbf49;
+$color-red: #d62828;
+$color-blue: #003049;
+$color-grey: #e7ecef;
 
-$color-primary-light: #66FCF1;
-$color-primary-dark: #45A29E;
+$mq-large: 62.5em;
+$mq-medium: 43.75em;
+$mq-small: 34.375em;
 
-$grid-width: 114rem;
-$gutter-vertical: 8rem;
-$gutter-vertical-small: 6rem;
-$gutter-horizontal: 6rem;
-$gutter-horizontal-small: 3rem;
-
-
-$font-family-title: 'Goblin One';
-$font-family-text: 'Raleway';
-
-$mq-largest: 87.5em;
-$mq-large: 78.15em;
-$mq-medium: 65em;
-$mq-small: 37.5em;
-
+$font-primary: 'Lato';
+$font-display: 'Josefin Sans';
 
  *,
  *::before,
@@ -34,21 +25,48 @@ $mq-small: 37.5em;
 html{
     box-sizing: border-box;
     font-size: 62.5%; // 10 px / 16px (standard browser size) = 62.5% -> 1 rem = 10px
-    font-family: $font-family-text, "sans-serif";
-    font-weight: 400;
-    line-height: 1.7;
-    color: $color-grey-dark;
+    font-family: $font-primary, "sans-serif";
+    font-weight: 300;
+    line-height: 1.6;
+    color: $color-black;
 
-    @media only screen and (max-width: $mq-largest){
+    @media only screen and (max-width: $mq-large){
         font-size: 56.25%;
     }
 
-    @media only screen and (max-width: $mq-largest){
+    @media only screen and (max-width: $mq-small){
         font-size: 50%;
     }
 }
 
 body{
-    background-color: oldlace;
+    background-color: $color-grey;
+    margin: 0 !important;
 }
 
+.container{
+    //height: 100vh;
+    width: 100%;
+    //overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(4, 100vh);
+    gap: 5rem;
+
+    @media only screen and (max-width: $mq-medium){
+        gap: 2rem;
+        grid-template-rows: repeat(3, 100vh) 80vh;
+    }
+
+    @media only screen and (max-width: $mq-small){
+        grid-template-rows: 100vh minmax(65vh, max-content) 100vh 80vh;
+    }
+}
+
+.section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end];
+    overflow: hidden;
+}

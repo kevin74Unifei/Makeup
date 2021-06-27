@@ -1,0 +1,26 @@
+.definition{
+    grid-column: col-start 5 / full-end;
+    height: 100%;
+    width: 100%;
+    
+    font-size: 4.5rem;
+    font-family: $font-display;
+    font-weight: 700;
+    color: $color-blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 1rem;
+
+    @media only screen and (max-width: $mq-medium){
+        font-size: 3.5rem;
+    }
+
+    &--pos{
+        background-color: transparent;
+        color: $color-grey;
+    }
+}

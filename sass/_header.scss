@@ -1,116 +1,16 @@
 .header{
-    background-image: 
-        linear-gradient(to bottom, rgba($color-black, .8), rgba($color-grey-dark, 1)),
-        url('../img/camera.jpg');
     height: 100vh;
     background-size: cover;
     background-position: top;
-    position: relative;
-
-    &__text-box{
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        text-align: center;
-
+    
+    &__img{
+        background-image: url('../img/pre-makeup.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-column: full-start / col-end 4;
     }
 
     &__title{
-        text-align: left;
-        width: max-content;
-        font-family: $font-family-title;
-        margin: 0 auto;
-        
-        &-primary{
-            color: $color-grey-light;
-        
-            font-size: 3.2rem;
-            letter-spacing: 1rem;
-            
-            display: block;    
-            animation: moveFromTop 2s ease-out;
-
-            @media only screen and (max-width: $mq-large){
-                font-size: 2.5rem;
-            }
-
-            @media only screen and (max-width: $mq-small){
-                font-size: 2rem;
-                letter-spacing: .7rem;
-            }
-        }
-        
-        &-secundary{
-            color: $color-primary-dark;
-            font-size: 5rem;
-            letter-spacing: 4.6rem;
-
-            display: block;
-            animation: moveFromBottom 2s ease-out;
-
-            @media only screen and (max-width: $mq-large){
-                font-size: 4.2rem;
-                letter-spacing: 3.68rem;
-            }
-
-            @media only screen and (max-width: $mq-small){
-                font-size: 3rem;
-                letter-spacing: 3.15rem;
-            }
-        }
-    }
-
-    &__btn{
-        display: inline-block;
-        margin-top: 15rem;
-        animation: moveFromLeft 1.5s ease-out;
-    }
-    
-    &__logo{
-        height: 6rem;
-        margin-left: 2rem;
-        animation: scaleFromNothing 1.5s ease-out;
-
-        @media only screen and (max-width: $mq-small){
-            margin-left: 1rem;
-            margin-top: 2.5rem;
-        }
-    }
-}
-
-.navigation{
-    animation: moveFromTop 2s ease-in;
-
-    &__list{
-        width: max-content;
-        list-style: none;
-        overflow: hidden;
-        margin: 0 auto;
-        border-radius: 100px;
-        transform: translateY(2rem);
-        border-bottom: 1px solid $color-primary-light;  
-        box-shadow: 0 2rem 5rem rgba($color: $color-black, $alpha: .7);
-    }
-
-    &__item{
-        float: left;
-        background-color: rgba($color-grey-dark, 0.4);        
-    }
-
-    &__link{
-        &:link, 
-        &:visited{
-            text-decoration: none;
-            display: inline-block;
-            color: $color-grey-light;
-            padding: 1.5rem 2rem;
-            text-align: center;
-            font-size: 1.6rem;
-        }
-
-        &:hover{
-            background-color: $color-grey-dark;
-            border-radius: 0;
-        }
+        grid-column: col-start 5 / full-end;
     }
 }

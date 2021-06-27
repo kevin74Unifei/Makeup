@@ -1,419 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/style.css">
-        <!-- <link rel="stylesheet" href="css/icon-font.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Lato:wght@100;300;400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/icon-font.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
-        <link rel="shortcut icon" type="image/png" href="img/logo-transparent.png">
+    <!-- <link rel="shortcut icon" type="image/png" href="img/logo-transparent.png"> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+
+    <title>Makeup</title>
+</head>
+
+<body class="container" id="container">
+    <nav class="navigation" id="navigation">
+        <ul class="navigation__list">
+            <li class="navigation__item">Home</li>
+            <li class="navigation__item">About</li>
+            <li class="navigation__item">Makeup</li>
+            <li class="navigation__item">Stories</li>
+        </ul>
+    </nav>
+
+    <section class="section section--pre">
+        <div class="model model--pre">
+            <div class="model__img model__img--pre"></div>
+        </div>
+        <span class="definition definition__title definition--pre">Every Woman is Beautiful</span>
+    </section>
+    <section class="section section--pos">
+        <div class="model model--pos">
+            <div class="model__img model__img--pos"></div>
+        </div>
+        <div class="definition definition__title definition--pos">
+            Every Woman Can become more Beautiful
+        </div>
+    </section>
+
+    <section class="testimonial__section">
+        <div class="testimonial__info delayed--appearance">
+            <div class="testimonial__title"> What Customers have to Say </div>
+        </div>
+
+        <div class="testimonial testimonial--1 delayed--appearance">
+            <span class="testimonial__text">
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                alias officia at voluptates?"
+            </span>
+            <img class="testimonial__img" id="testimonial__img--model" src="img/model-12.jpg" alt="Model" />
+            <div class="testimonial__person">
+                <span class="testimonial__name">Ana</span>
+                <span class="testimonial__job">Model</span>
+            </div>
+        </div>
+
+        <div class="testimonial testimonial--2 delayed--appearance">
+            <span class="testimonial__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                perferendis repudiandae laudantium ut id, dicta sit porro culpa
+                quisquam suscipit unde nihil veritatis, cupiditate vero autem rerum
+                tenetur eligendi laborum?
+            </span>
+            <img class="testimonial__img" id="testimonial__img--model" src="img/model-14.jpg" alt="Model" />
+            <div class="testimonial__person">
+                <span class="testimonial__name">Katheryn</span>
+                <span class="testimonial__job">Teacher</span>
+            </div>
+        </div>
+
+        <div class="testimonial testimonial--3 delayed--appearance">
+            <span class="testimonial__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
+                officia provident totam ullam. Et nisi porro obcaecati, asperiores,
+                unde dolor minus praesentium dolores excepturi, repellendus atque
+                temporibus. Quas, repellendus ab.
+            </span>
+            <img class="testimonial__img" id="testimonial__img--model" src="img/model-2.jpg" alt="Model" />
+            <div class="testimonial__person">
+                <span class="testimonial__name">Romanus</span>
+                <span class="testimonial__job">Architect</span>
+            </div>
+        </div>
         
-        <title>Filmext | Level up your videos</title>
-    </head>
-    <body>
-        <header class="header">
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">About</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Studio</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Editing</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Stories</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Start Now</a>                        
-                    </li>
-                </ul>
-            </nav>
-            <img src="img/logo-transparent.png" alt="Logo" class="header__logo">
-            <div class="header__text-box">
-                <h1 class="header__title">
-                    <span class="header__title-primary">Take Your Videos To The</span>
-                    <span class="header__title-secundary">Next Level</span>                    
-                </h1>
-
-                <a href="#" class="btn header__btn">Start Now</a>
+        <!-- <div class="testimonial" id="testimonial--model">
+            <img class="testimonial__img" id="testimonial__img--model" src="img/pre-makeup.jpg" alt="Model">
+            <div class="testimonial__content">
+                <span class="testimonial__text">
+                    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam alias officia at voluptates?"
+                </span>
+                <span class="testimonial__name">Ana</span>
+                <div class="testimonial__job">Model</div>
             </div>
-        </header>
+        </div> -->
 
-        <section class="about">
-            <h2 class="heading-h2 about__title center">Trusted By 100+ Content Creators</h2>
-            <p class="about__text center">
-                Here it is some of our their results after starting working with us:
-            </p>
-            <div class="row about__stats">                
-                <div class="col-1-of-4">
-                    <div class="about__item">
-                        <h4 class="heading-h4 about__label">
-                            <svg class="about__icon">
-                                <use xlink:href="img/sprite.svg#eye"></use>
-                            </svg>
-                            Views
-                        </h4>
-                        <h3 class="heading-h3 about__number">100 Million+</h3> 
-                    </div>  
-                </div>
+        <!-- <div class="testimonial__container">
+            <span class="testimonial__title"> What Customers have to Say </span>
 
-                <div class="col-1-of-4">
-                    <div class="about__item">
-                        <h4 class="heading-h4 about__label">
-                            <svg class="about__icon">
-                                <use xlink:href="img/sprite.svg#dinheiro"></use>
-                            </svg>
-                            Revenue
-                        </h4>
-                        <h3 class="heading-h3 about__number">$10 Million</h3>  
-                    </div>
-                </div>
-
-                <div class="col-1-of-4">
-                    <div class="about__item">
-                        <h4 class="heading-h4 about__label">
-                            <svg class="about__icon">
-                                <use xlink:href="img/sprite.svg#globo"></use>
-                            </svg>
-                            Present at
-                        </h4>
-                        <h3 class="heading-h3 about__number">100 Countries</h3>
-                    </div>        
-                </div>
-
-                <div class="col-1-of-4">
-                    <div class="about__item">
-                        <h4 class="heading-h4 about__label">
-                            <svg class="about__icon">
-                                <use xlink:href="img/sprite.svg#melhor-escolha"></use>
-                            </svg>
-                            Likes
-                        </h4>
-                        <h3 class="heading-h3 about__number">22 Milion+</h3>   
-                    </div>
-                </div>   
-
-            </div>
-        </section>
-        
-        <section class="studio">            
-            <h2 class="heading-h2 studio__title center">Choose Your Studio</h2>
-            <p class="studio__text center">
-                Select where you want to record your videos
-            </p>
-            <div class="row">
-                <div class="col-1-of-2 studio__card">
-                    <img src="img/casual-setup.jpg" alt="Casual Setup" class="studio__img">
-                    <div class="studio__content">
-                        <h4 class="heading-h4 center studio__label">Your Place</h4>
-                        <ul class="studio__list">
-                            <li class="studio__item">You don't need to leave its confort</li>
-                            <li class="studio__item">We bring our equipament</li>
-                            <li class="studio__item">Transform your place into a studio</li>
-                            <li class="studio__item">Great video quality</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-1-of-2 studio__card">
-                    <img src="img/professional-setup.jpg" alt="Professional Setup" class="studio__img">
-                    <div class="studio__content">
-                        <h4 class="heading-h4 center studio__label">Our Studio</h4>
-                        <ul class="studio__list">
-                            <li class="studio__item">You come to our place</li>
-                            <li class="studio__item">Use our equipament</li>
-                            <li class="studio__item">It's frictionless, so you focus on the content</li>
-                            <li class="studio__item">The best video quality</li>                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section> 
-
-        <section class="editing">
-            <h2 class="heading-h2 editing__title center">Choose the Edting Style</h2>
-            <p class="editing__text center">
-                Select the way your videos are edited
-            </p>
-            <div class="row">
-                <div class="editing__item">
-                    <div class="col-1-of-3 editing__col">
-                        <img src="img/serious.jpg" alt="Serious Editing" class="editing__img editing__img--left">
-                    </div>
-                    <div class="col-2-of-3">
-                        <div class="editing__content editing__content--serious">
-                            <h4 class="editing__subtitle heading-h4" >Serious Editing</h4>
-                            <hr>
-                            <div class="editing__options">
-                                <div class="col-1-of-2 editing__option">
-                                    <svg class="editing__icon">
-                                        <use xlink:href="img/sprite.svg#ajustamento"></use>
-                                    </svg>
-                                    Enhance your content
-                                </div>
-                                <div class="col-1-of-2 editing__option">
-                                    <svg class="editing__icon">
-                                        <use xlink:href="img/sprite.svg#jogar"></use>
-                                    </svg>
-                                    Adds a serious tone
-                                </div>
-                            </div>
-                            <div class="editing__options">
-                                <div class="col-1-of-2 editing__option">
-                                    <svg class="editing__icon">
-                                        <use xlink:href="img/sprite.svg#senha"></use>
-                                    </svg>
-                                    Errors are corrected
-                                </div>
-                                <div class="col-1-of-2 editing__option">
-                                    <svg class="editing__icon">
-                                        <use xlink:href="img/sprite.svg#complacente"></use>
-                                    </svg>
-                                    Clarify the desired message
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="editing__item">
-                    <div class="col-2-of-3 editing__col">
-                        <div class="editing__content editing__content--funny">
-                            <h4 class="editing__subtitle heading-h4" >Funny Editing</h4>
-                            <hr>
-                            <div class="editing__options">
-                                <div class="col-1-of-2 editing__option">
-                                    <svg class="editing__icon">
-                                        <use xlink:href="img/sprite.svg#ajustamento"></use>
-                                    </svg>
-                                    Enhance your content
-                                </div>
-                                <div class="col-1-of-2 editing__option">
-                                    <svg class="editing__icon">
-                                        <use xlink:href="img/sprite.svg#jogar"></use>
-                                    </svg>
-                                    Adds humor
-                                </div>
-                            </div>
-                            <div class="editing__options">
-                                <div class="col-1-of-2 editing__option">
-                                    <svg class="editing__icon">
-                                        <use xlink:href="img/sprite.svg#senha"></use>
-                                    </svg>
-                                    Even unprentious lines become funny
-                                </div>
-                                <div class="col-1-of-2 editing__option">
-                                    <svg class="editing__icon">
-                                        <use xlink:href="img/sprite.svg#complacente"></use>
-                                    </svg>
-                                    The joy is guaranted
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                    <div class="col-1-of-3">
-                        <img src="img/funny.jpg" alt="Serious Editing" class="editing__img editing__img--right">
-                    </div>                  
-                </div>
-            </div>
-        </section>
-        
-        <section class="social">
-            <h2 class="heading-h2 social__title center">Comments from of our partners</h2>
-            <p class="social__text center">
-                See what our partners have to say about us
-            </p>
-            <div class="row social__item">
-                <div class="col-1-of-3 social__writer">
-                    <img src="img/person-1.jpg" alt="Person 1" class="social__img">
-                    <p class="social__person">
-                        <span class="social__name">Cleo Patra</span>
-                        <span class="social__job">5mi courses sold at Udemy</span>                        
-                    </p>
-                </div>
-                <div class="col-2-of-3">
-                    <p class="social__comment">"Before I meet Filmext, I was an ordinary content creator with a few thousand followers. But once I saw how they took regular content like mine and transformed it into something beyond my imagination, that is the moment when I knew I had to work with them. Never regretted a single moment of our relation, I recommend Filmext to every content creator out there."</p>
-                </div>
-            </div>
-            
-            <div class="row social__item">
-                <div class="col-1-of-3 social__writer">
-                    <img src="img/person-2.jpg" alt="Person 1" class="social__img">
-                    <p class="social__person">
-                        <span class="social__name">Joanna Darkson</span>
-                        <span class="social__job">3mi followers at LinkedIn</span>                        
-                    </p>
-                </div>
-                <div class="col-2-of-3">
-                    <p class="social__comment">"Filmext is the company I recommend to everyone because they care about you. They took my videos to the next while coaching me about how to behave in front of a camera. They are my favourite company in the world."</p>
+            <div class="testimonial" id="testimonial--model">
+                <span class="testimonial__text">
+                    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                    alias officia at voluptates?"
+                </span>
+                <img class="testimonial__img" id="testimonial__img--model" src="img/model-12.jpg" alt="Model" />
+                <div class="testimonial__person">
+                    <span class="testimonial__name">Ana</span>
+                    <span class="testimonial__job">Model</span>
                 </div>
             </div>
 
-            <div class="row social__item">
-                <div class="col-1-of-3 social__writer">
-                    <img src="img/person-3.jpg" alt="Person 1" class="social__img">
-                    <p class="social__person">
-                        <span class="social__name">Bjorn Greyson</span>
-                        <span class="social__job">1.5mi subs at Youtube</span>                        
-                    </p>
-                </div>
-                <div class="col-2-of-3">
-                    <p class="social__comment">"I say to my friends that my life has two parts, one before I meet Filmext and one after it. They transformed my life by making my videos great, and because of them, many doors opened to me. Today, I'm incredibly happy with the content I produce. So, I recommend them without a shadow of a doubt."</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="plans">
-            <h2 class="heading-h2 plans__title center">Select the plant that fits you</h2>
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="plans__item">
-                        <div class="plans__header plans__header--starter">
-                            <h4 class="heading-h4 plans__header--title">
-                                <svg class="plans__header--icon">
-                                    <use xlink:href="img/sprite.svg#edicao-limitada"></use>
-                                </svg>
-                                Starter
-                            </h4>
-                            <h3 class="heading-h3 plans__price">400$/Month</h3>
-                        </div>
-                        <div class="plans__content">
-                            <ul class="plans__list">
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Select the editing Style
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Use the great recording equipaments
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Videos Edited within a week
-                                </li>
-                            </ul>
-                            <div class="plan__actions">
-                                <button class="btn plans__btn">Start now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-1-of-3">
-                    <div class="plans__item">
-                        <div class="plans__header plans__header--professional">
-                            <h4 class="heading-h4 plans__header--title">
-                                <svg class="plans__header--icon">
-                                    <use xlink:href="img/sprite.svg#garantido"></use>
-                                </svg>
-                                Professional
-                            </h4>
-                            <h3 class="heading-h3 plans__price">700$/Month</h3>
-                        </div>
-                        <div class="plans__content">
-                            <ul class="plans__list">
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Select the editing Style
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Select where you want to record
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Use the best recording equipaments
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Videos Edited within three days
-                                </li>
-                            </ul>
-                            <div class="plan__actions">
-                                <button class="btn plans__btn">Start now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-1-of-3">
-                    <div class="plans__item">
-                        <div class="plans__header plans__header--premium">
-                            <h4 class="heading-h4 plans__header--title">
-                                <svg class="plans__header--icon">
-                                    <use xlink:href="img/sprite.svg#alta-qualidade"></use>
-                                </svg>
-                                Premium
-                            </h4>
-                            <h3 class="heading-h3 plans__price">1.000$/Month</h3>
-                        </div>
-                        <div class="plans__content">
-                            <ul class="plans__list">
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Select the editing Style
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Select where you want to record
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Use the best recording equipaments
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Help with the content
-                                </li>
-                                <li>
-                                    <svg class="plans__icon">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                    </svg>
-                                    Videos Edited within a day
-                                </li>
-                            </ul>
-                            <div class="plan__actions">
-                                <button class="btn plans__btn">Start now</button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="testimonial" id="testimonial--model">
+                <span class="testimonial__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    perferendis repudiandae laudantium ut id, dicta sit porro culpa
+                    quisquam suscipit unde nihil veritatis, cupiditate vero autem rerum
+                    tenetur eligendi laborum?
+                </span>
+                <img class="testimonial__img" id="testimonial__img--model" src="img/model-14.jpg" alt="Model" />
+                <div class="testimonial__person">
+                    <span class="testimonial__name">Katheryn</span>
+                    <span class="testimonial__job">Teacher</span>
                 </div>
             </div>
-        </section>
-    </body>
+
+            <div class="testimonial" id="testimonial--model">
+                <span class="testimonial__text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
+                    officia provident totam ullam. Et nisi porro obcaecati, asperiores,
+                    unde dolor minus praesentium dolores excepturi, repellendus atque
+                    temporibus. Quas, repellendus ab.
+                </span>
+                <img class="testimonial__img" id="testimonial__img--model" src="img/model-2.jpg" alt="Model" />
+                <div class="testimonial__person">
+                    <span class="testimonial__name">Romanus</span>
+                    <span class="testimonial__job">Architect</span>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <section class="gallery__section">
+        <div class="gallery">
+            <span class="gallery__title delayed--appearance">A taste of my work</span>
+            <img src="../img/model-1.jpg" alt="Picture 1" class="gallery__img gallery__img--1 delayed--appearance" />
+            <img src="../img/model-15.jpg" alt="Picture 2" class="gallery__img gallery__img--2 delayed--appearance" />
+            <img src="../img/model-3.jpg" alt="Picture 3" class="gallery__img gallery__img--3 delayed--appearance" />
+            <img src="../img/model-4.jpg" alt="Picture 4" class="gallery__img gallery__img--4 delayed--appearance" />
+            <img src="../img/model-5.jpg" alt="Picture 5" class="gallery__img gallery__img--5 delayed--appearance" />
+            <img src="../img/model-6.jpg" alt="Picture 6" class="gallery__img gallery__img--6 delayed--appearance" />
+            <img src="../img/model-8.jpg" alt="Picture 8" class="gallery__img gallery__img--8 delayed--appearance" />
+            <img src="../img/model-9.jpg" alt="Picture 9" class="gallery__img gallery__img--9 delayed--appearance" />
+            <img src="../img/model-10.jpg" alt="Picture 10" class="gallery__img gallery__img--10 delayed--appearance" />
+            <img src="../img/model-11.jpg" alt="Picture 11" class="gallery__img gallery__img--11 delayed--appearance" />
+            <img src="../img/model-12.jpg" alt="Picture 12" class="gallery__img gallery__img--12 delayed--appearance" />
+            <img src="../img/model-13.jpg" alt="Picture 13" class="gallery__img gallery__img--13 delayed--appearance" />
+        </div>
+    </section>
+
+    <section class="contact__section">
+        <div class="contact__info delayed--appearance">
+            <span class="contact__title">Are you teady to reveal your true self?</span>
+            <button class="btn contact__btn">Schedule a Make Up Now</button>
+        </div>
+        <img src="img/silhouette.jpg" alt="Silhouette" class="contact__img delayed--appearance">
+    </section>
+
+    <!-- <div class="brush__container">
+            <img src="img/brush.png" alt="Brush" id="brush" class="brush">
+        </div> -->
+
+    <!-- <div class="lipstick__container">
+            <img src="img/lipstick.png" alt="Lipstick" id="lipstick" class="lipstick">
+        </div> -->
     <footer class="footer">
         <p class="footer__content">
             &copy; Designed by Kevin - 2021
         </p>
-        <!-- <div class="display: none">Ícones feitos por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div><div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/dinosoftlabs" title="DinosoftLabs">DinosoftLabs</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div> -->
     </footer>
+</body>
+
+<script src="js/script.js"></script>
+
 </html>

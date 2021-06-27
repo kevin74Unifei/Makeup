@@ -1,7 +1,7 @@
 {
-  "name": "filmext",
+  "name": "Makeup",
   "version": "1.0.0",
-  "description": "landing page for filmext",
+  "description": "landing page for makeup",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",

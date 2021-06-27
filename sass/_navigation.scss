@@ -1,0 +1,33 @@
+.navigation{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    color: $color-blue;
+    font-weight: 700;
+    
+    &__pos{
+        color: $color-grey;
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        float: left;
+        padding: 2rem;
+        font-size: 1.6rem;
+        transition: all .5s ease-in;
+        cursor: pointer;
+
+        &:hover, 
+        &:active{
+            transform: translateY(-1px);
+            background-color: $color-white;
+            color: $color-blue;
+        }
+    }
+}

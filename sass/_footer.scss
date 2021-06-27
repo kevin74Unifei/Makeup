@@ -1,10 +1,13 @@
-.footer{    
-    background-color: $color-grey-dark;
+.footer{  
+    background-color: $color-red;
+    color: $color-grey;
+    grid-row: 5;
+    grid-column: 1 / -1;
+    display: block;
 
     &__content{
         text-align: center;
         font-size: 1.6rem;
-        color: $color-grey-light;
         padding: 1rem;
     }
 }

@@ -1,50 +1,34 @@
 
-.heading-h2{
-    font-family: $font-family-title;
-    color: $color-primary-dark;
-    font-size: 2.8rem;
-    letter-spacing: 1.2rem;
-
-    @media only screen and (max-width: $mq-large){
-        font-size: 2.4rem;
-        letter-spacing: 1.2rem;
-    }
-
-    @media only screen and (max-width: $mq-medium) {
-        font-size: 2.1rem;
-        letter-spacing: 1rem;
-    }
-
-    @media only screen and (max-width: $mq-large){
-        font-size: 1.95rem;
-    }
-}
-
-.heading-h3{
-    color: $color-primary-light;
-    font-size: 1.9rem;
-    letter-spacing: .8rem;
-}
-
-.heading-h4{
-    color: $color-primary-dark;
-    font-size: 1.8rem;
-    letter-spacing: .7rem;
-}
-
 .center{
     text-align: center;
 }
 
+.delayed--appearance{
+    opacity: 0;
+    transform: translateX(-4rem);
+    transition: all 1s ease-out;
+
+    &.visible{
+        opacity: 1;
+        transform: none;
+    }
+}
+
 .btn{
-    border: 1px solid $color-primary-dark;
     font-size: 1.6rem;
-    font-family: $font-family-title;
-    background-color: transparent;
-    color: $color-white;
+    font-family: $font-display;
+    background-color: $color-red;
+    color: $color-grey;
     text-transform: uppercase;
     padding: 1.5rem;
     transition: all .2s;
+    border-radius: 1rem;
+    border: none;
+    
+    @media only screen and (max-width: $mq-medium){
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
 
     &:visited, 
     &:link{
@@ -52,20 +36,10 @@
     }
 
     &:hover{
-        border: 1px solid $color-primary-light;
-        color: $color-primary-light;
+        transform: translateY(-2px);
     }
 
     &:active{
-        transform: translateY(-2px);
-    }
-}
-
-
-@mixin clearfix{
-    &::after{
-        content: "";
-        display: table;
-        clear: both;
+        transform: translateY(-4px);
     }
 }
