@@ -5,11 +5,20 @@
     display: flex;
     justify-content: center;
     z-index: 10;
-    color: $color-blue;
+    color: $color-grey;
     font-weight: 700;
     
     &__pos{
-        color: $color-grey;
+        color: $color-blue;
+
+        .navigation__item{
+            &:hover, 
+            &:active{
+                transform: translateY(-1px);
+                background-color: $color-red;
+                color: $color-grey;
+            }
+        }
     }
 
     &__list{

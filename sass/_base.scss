@@ -1,11 +1,16 @@
 $color-black: #001219;
 $color-white: #eae2b7;
 
-$color-primary: #f77f00;
-$color-primary-light: #fcbf49;
+$color-primary: #001233;
+$color-primary-light: #0466C8;
+$color-primary-dark: #0B132B;
+
 $color-red: #d62828;
 $color-blue: #003049;
 $color-grey: #e7ecef;
+
+
+
 
 $mq-large: 62.5em;
 $mq-medium: 43.75em;
@@ -69,4 +74,8 @@ body{
     display: grid;
     grid-template-columns: [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end];
     overflow: hidden;
+
+    &--pre{
+        background-color: $color-red;
+    }
 }
